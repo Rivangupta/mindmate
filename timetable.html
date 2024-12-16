@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMate - Timetable Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Timetable Generator 📅</h1>
+            <p>Plan your day efficiently with a personalized timetable!</p>
+        </header>
+        <form id="timetable-form">
+            <label for="subjects">Enter your subjects (comma-separated):</label>
+            <textarea id="subjects" placeholder="Math, Science, English..." rows="4"></textarea>
+
+            <label for="start-time">Start Time:</label>
+            <input type="time" id="start-time" value="09:00">
+
+            <label for="end-time">End Time:</label>
+            <input type="time" id="end-time" value="17:00">
+
+            <button type="button" onclick="generateTimetable()">Generate Timetable</button>
+        </form>
+        <div id="generated-timetable"></div>
+    </div>
+    <script src="timetable.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

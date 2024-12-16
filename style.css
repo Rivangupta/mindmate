@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 50px;
+  position: fixed;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: transparent;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  height: 20%;
+  width: 20%;
+}
+.brand-name {
+  color: #4691f1;
+  font-size: 35px;
+}
+.sign-in-btn {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #47bfc9;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+}
+#hero {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#hero #part1 {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+}
+#part1 #h1-1 {
+  margin-top: 100px;
+  margin-left: 15%;
+  font-size: 60px;
+  color: #111;
+}
+#part1 #h1-2 {
+  margin-left: 15%;
+  font-size: 60px;
+  line-height: 1.5;
+  color: #111;
+}
+#part1 #h1-3 {
+  color: #59aaeb;
+}
+#hero #part2 {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(45deg, #f1f6fd, #e5eaed, #ebc6a5, #f7ab6c);
+  padding: 20px;
+  position: relative;
+}
+#part2 img {
+  height: 100%;
+  border-radius: 20px;
+}
+#part2 #chat1 {
+  position: absolute;
+  height: 50px;
+  top: 70%;
+  left: -5%;
+}
+#part2 #chat2 {
+  position: absolute;
+  height: 50px;
+  top: 85%;
+  left: 14%;
+}
+
+.features-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+  margin-left: 15%;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 2px solid #20c997;
+  border-radius: 30px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  background-color: #20c997;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.feature-item span {
+  color: #333;
+  font-weight: bold;
+  font-size: 15px;
+}
+.additional {
+  margin-top: 50px;
+  margin-left: 18%;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 17px;
+  background-color: #20c997;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+}
+#page2 {
+  padding: 30px 80px;
+  background-color: #2ba1cc;
+}
+#page2 p {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.2;
+}
+#page3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://www.calmify.ai/_vercel/image?url=/cbt_bg.png&w=1536&q=100);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#page3 h1 {
+  color: #4691f1;
+  font-size: 100px;
+  text-align: center;
+  padding-top: 10px;
+}
+#page3 p {
+  color: #194a61;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+#page3 #circle {
+  position: absolute;
+  left: 37%;
+  bottom: 0;
+  padding: 10px;
+  height: 400px;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+* Chatbot Specific Styles */
+/* Chatbot Container */
+
+.main-container{
+    background-color: #4690f191;
+}
+.chatbot-container {
+  background-color: #4691f1; /* Soft Pink */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#chat-log {
+  height: 300px;
+  width: 100%;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  background-color: #fef0f5;
+  padding: 15px;
+  border-radius: 8px;
+  animation: fadeInUp 1.5s ease-out;
+  max-height: 300px; /* Ensure scrollability */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#chat-input {
+  width: 100%;
+  max-width: 500px; /* Larger input width */
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 2px solid #ff66b2;
+  margin-bottom: 10px;
+  background-color: #fef0f5;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+#chat-input:focus {
+  border-color: #9b4dca;
+  outline: none;
+}
+button {
+  background-color: #9b4dca;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+  background-color: #7e3baa;
+  transform: translateY(-2px);
+}
+/* Stress Relief Page Styles */
+.stress-relief-container {
+  background-color: #e8f4f8;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #5e5e5e;
+}
+
+button.back-button {
+  background-color: #ff4b9a; /* Pink background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button.back-button:hover {
+  background-color: #ff3366;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #5e5e5e;
+  margin-bottom: 10px;
+}
+
+ul#exercise-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2rem;
+  color: #5e5e5e;
+  margin-top: 20px;
+}
+
+ul#exercise-list li {
+  background-color: #f3e5f5;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+}
+
+#breathing-circle {
+  margin: 40px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ff66b2;
+  animation: breathingAnimation 4s infinite;
+}
+
+@keyframes breathingAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+    background-color: #ff66b2;
+  }
+  50% {
+    transform: scale(1.5);
+    background-color: #9b4dca;
+  }
+}
+
+#breathing-animation {
+  margin-top: 40px;
+  font-size: 1.4rem;
+  color: #5e5e5e;
+}
+/* Stress Relief Page Styles */
+.stress-relief-container {
+  background-color: #e8f4f8; /* Light pastel blue background */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #5e5e5e;
+}
+
+button.back-button {
+  background-color: #ff4b9a; /* Pink background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button.back-button:hover {
+  background-color: #ff3366;
+}
+
+/* Stretching Animation */
+.stretching-person {
+  width: 100px;
+  height: 150px;
+  background-color: #ff66b2; /* Light pink box for stretching effect */
+  margin: 20px auto;
+  border-radius: 10px;
+  position: relative;
+  animation: stretch 3s ease-in-out infinite;
+}
+
+/* Keyframe for stretching motion */
+@keyframes stretch {
+  0%,
+  100% {
+    transform: scaleY(1); /* Normal position */
+  }
+  25% {
+    transform: scaleY(1.2); /* Stretch up (stretching animation) */
+  }
+  50% {
+    transform: scaleY(0.9); /* Contract back (relaxing) */
+  }
+  75% {
+    transform: scaleY(1.1); /* Stretch again (mid-point stretch) */
+  }
+}
+
+/* General Layout */
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3e5f5; /* Soft pastel color */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ff66b2; /* Pastel Pink */
+}
+
+label {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #9b4dca; /* Pastel Purple */
+  display: block;
+  margin-bottom: 5px;
+}
+
+textarea,
+input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  border: 2px solid #9b4dca;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: #ff66b2; /* Focus Color */
+}
+
+button {
+  background-color: #9b4dca;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8e24aa;
+}
+
+/* Timetable display */
+#generated-timetable {
+  margin-top: 30px;
+}
+
+#generated-timetable ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#generated-timetable li {
+  background-color: #ffebf2;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+#changeable-word{
+  transition: all ease 0.5s;
+}
